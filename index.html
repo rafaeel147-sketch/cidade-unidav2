@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cidade Unida</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: #f4f4f4;
+      text-align: center;
+      padding: 20px;
+    }
+    .box {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 400px;
+      margin: auto;
+    }
+    input, textarea, button {
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+    }
+    button {
+      background: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Cidade Unida</h1>
+
+  <div class="box">
+    <h3>Registrar Problema</h3>
+
+    <input type="text" id="titulo" placeholder="Título do problema">
+    <textarea id="descricao" placeholder="Descreva o problema"></textarea>
+
+    <button onclick="enviar()">Enviar</button>
+  </div>
+
+  <script>
+    function enviar() {
+      const titulo = document.getElementById("titulo").value;
+      const descricao = document.getElementById("descricao").value;
+
+      if (!titulo || !descricao) {
+        alert("Preencha todos os campos!");
+        return;
+      }
+
+      alert("Denúncia registrada (protótipo)");
+
+      console.log({ titulo, descricao });
+    }
+  </script>
+
+</body>
+</html>
